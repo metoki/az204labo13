@@ -30,11 +30,11 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: copy
-        run: copy 'D:\a\az204labo13\az204labo13\bin\Release\net8.0\*' "${{env.DOTNET_ROOT}}/myapp/*"
+      #- name: copy
+      #  run: copy 'D:\a\az204labo13\az204labo13\bin\Release\net8.0\*' "${{env.DOTNET_ROOT}}/myapp/*"
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/"
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
