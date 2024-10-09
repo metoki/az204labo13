@@ -21,6 +21,9 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      - name: debug
+        run: echo ${{env.DOTNET_ROOT}}
+        
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
